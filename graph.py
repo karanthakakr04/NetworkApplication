@@ -24,7 +24,7 @@ def animation_frame(i):
 
     # Opening the file and reading each row of CPU utilization data in the file; creating a list of values
     # NOTE: When you don't specify the file operation it is by default 'r'
-    cpu_data = open(r'/home/karan/PycharmProjects/NetworkApp/cpu.txt').read().splitlines()  # Get the data
+    cpu_data = open(r'/home/karan/PycharmProjects/NetworkApp/cpu.txt', encoding='utf-8').read().splitlines()  # Get the data
     for value in cpu_data:
         # Iterating over the list of CPU values and appending each value (converted to float) to the previously
         # created list - x; adding an if statement to exclude any blank lines in the file

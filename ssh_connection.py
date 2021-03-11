@@ -32,7 +32,7 @@ else:
 def ssh_connection(ip):
     # Creating SSH connection
     try:
-        with open(user_credentials, 'r') as selected_user_file:
+        with open(user_credentials, 'r', encoding='utf-8') as selected_user_file:
             # Starting from the beginning of the file
             selected_user_file.seek(0)
 
@@ -72,7 +72,7 @@ def ssh_connection(ip):
         connection.send("configure terminal\n")
         time.sleep(1)
 
-        with open(cmd_file, 'r') as selected_cmd_file:
+        with open(cmd_file, 'r', encoding='utf-8') as selected_cmd_file:
             # Starting from the beginning of the file
             selected_cmd_file.seek(0)
 
@@ -108,7 +108,7 @@ def ssh_connection(ip):
         cpu_utilization = cpu_usage.group(2)
 
         # Opening the CPU utilization text file and appending the results
-        with open(r'/home/karan/PycharmProjects/NetworkApp/cpu.txt', 'a') as cpu_stats:
+        with open(r'/home/karan/PycharmProjects/NetworkApp/cpu.txt', 'a', encoding='utf-8') as cpu_stats:
             cpu_stats.write(cpu_utilization + '\n')
 
         # Closing the ssh connection
