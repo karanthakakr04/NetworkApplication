@@ -95,10 +95,12 @@ def ssh_connection(ip):
             print(f'DONE for the device {ip}. Data sent to file at {datetime.now()}\n')  # use the datetime module to
             # print the current date and time
 
+        # Part 1:
         # Test for reading command output
         # Note: Output from the router is a byte-like object which is why we use str conversion.
         # print(str(router_output) + '\n')
 
+        # Part 2:
         # Searching for the CPU utilization value within the output of "show processes top once"
         # NOTE: In python 3, the default encoding is "utf-8", so you can directly use:
         cpu_usage = re.search(r'%Cpu\(s\):(\s)+(.+?)(\s)*us,', router_output.decode())  # decoding the bytes
