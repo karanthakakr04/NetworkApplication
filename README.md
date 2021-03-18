@@ -22,13 +22,19 @@ The objective of this part is to automate commands on one or more switches using
 
 There are 3 files that can be used for configuration - username(s)/password(s), commands, and Internet Protocol (IP) addresses. The program will first check that the files are valid and that the IP addresses can be reached via ping. If the checks pass, then the program will run the commands below on all 3 Arista switches (must be running in Virtual Box). The ouput from the switches will need to be cleaned up for better readability, this is an arbitrary example to show the functionality.
 
-
+![1](https://user-images.githubusercontent.com/17943347/111696468-b99c2280-880a-11eb-8cab-758f85e0a4b4.png)
 
 If the checks pass, then the program will run the commands below on all 3 Arista switches (must be running in Virtual Box). The ouput from the switches will need to be cleaned up for better readability, this is an arbitrary example to show the functionality.
 
+![cmd](https://user-images.githubusercontent.com/17943347/111696541-d0db1000-880a-11eb-857a-29a01875d3ac.png)
 
+![2](https://user-images.githubusercontent.com/17943347/111696579-da647800-880a-11eb-84b7-d35560add4ff.png)
 
 We can pass more commands to the arista switches to further explore the functionality.
+
+![cmd_2](https://user-images.githubusercontent.com/17943347/111696902-3f1fd280-880b-11eb-8141-d58c689dc1b2.png)
+
+![NetworkApp_Fourth_Run](https://user-images.githubusercontent.com/17943347/111697028-65de0900-880b-11eb-8660-545e3a3ddb1e.png)
 
 # Part 2 - Extracting Network Parameter & Building Graph
 
@@ -36,10 +42,14 @@ The objective of this part is to extract the CPU utilization value from the swit
 
 Unlike the commands in part 1, we pass only one command to the arista switch inorder to get the CPU utilization value. Note that the program is going to verify all three files (usr.txt, cmd.txt, and ip.txt) even for this part of the project. 
 
-
+![cmd_3](https://user-images.githubusercontent.com/17943347/111697346-d2f19e80-880b-11eb-8480-0c7d4b1f65bf.png)
 
 The program will query the switch once every 10 seconds and extract the CPU parameter. 
 
+![cpu](https://user-images.githubusercontent.com/17943347/111697688-41cef780-880c-11eb-8934-d64834e28d55.png)
 
+![github_output](https://user-images.githubusercontent.com/17943347/111697512-0af8e180-880c-11eb-9b1c-988efe865404.png)
 
 After saving the utilization values in a dedicated text file, in this case cpu.txt, we will use it to build a live graph that keeps updating as new entries are added.
+
+![Arista_1_(2)](https://user-images.githubusercontent.com/17943347/111697892-89558380-880c-11eb-8d7e-d8c24b55778a.png)
