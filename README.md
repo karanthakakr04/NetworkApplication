@@ -32,7 +32,7 @@ If the checks pass, then the program will run the commands below on all 3 Arista
 
 We can pass more commands to the arista switches to further explore the functionality.
 
-![cmd_2](https://user-images.githubusercontent.com/17943347/111696902-3f1fd280-880b-11eb-8141-d58c689dc1b2.png)
+![cmd_2](https://user-images.githubusercontent.com/17943347/112176999-f67f6500-8bce-11eb-9711-3a2b1fd32340.png)
 
 ![NetworkApp_Fourth_Run](https://user-images.githubusercontent.com/17943347/111697028-65de0900-880b-11eb-8660-545e3a3ddb1e.png)
 
